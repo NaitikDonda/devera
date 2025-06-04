@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Devera</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: rgba(31,31,31);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        .thank-you-container {
+            max-width: 600px;
+            background: rgba(51,51,51);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            color: white;
+        }
+        
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 30px;
+            position: relative;
+        }
+        
+        .checkmark-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #008080;
+            position: absolute;
+        }
+        
+        .checkmark-check {
+            position: absolute;
+            left: 35px;
+            top: 45px;
+            width: 30px;
+            height: 15px;
+            border-left: 5px solid white;
+            border-bottom: 5px solid white;
+            transform: rotate(-45deg);
+            animation: drawCheck 0.5s ease-in-out;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            color: #aaa;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .btn-back {
+            display: inline-block;
+            background: #008080;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #008080;
+        }
+        
+        .btn-back:hover {
+            background: transparent;
+            color: #008080;
+        }
+        
+        @keyframes drawCheck {
+            0% {
+                height: 0;
+                width: 0;
+                opacity: 0;
+            }
+            50% {
+                height: 0;
+                width: 30px;
+                opacity: 1;
+            }
+            100% {
+                height: 15px;
+                width: 30px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .thank-you-container {
+                padding: 30px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .checkmark,
+            .checkmark-circle {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .checkmark-check {
+                left: 28px;
+                top: 36px;
+                width: 24px;
+                height: 12px;
+                border-width: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="checkmark">
+            <div class="checkmark-circle"></div>
+            <div class="checkmark-check"></div>
+        </div>
+        <h1>Thank You!</h1>
+        <p>Your message has been successfully received. I appreciate you reaching out and will get back to you as soon as possible.</p>
+        <a href="index.html" class="btn-back">Back to Home</a>
+    </div>
+</body>
+</html>
